@@ -1,0 +1,33 @@
+#wrapper {
+	width: 90%;
+	margin: 50px auto;
+	background: url(background.jpg) no-repeat scroll 0 0 transparent;
+	/*-----Закругленные уголки--------*/
+	-webkit-border-radius: 8px;/* Safari, Chrome */
+	-moz-border-radius: 8px;/* Firefox */
+	-khtml-border-radius: 8px;/* KHTML */
+	border-radius: 8px;/* CSS3 */
+	behavior: url(border-radius.htc); /* IE border-radius */
+	/*-----конец Закругленные уголки--------*/
+	width: 1000px;
+	height: 728;
+	margin: 50px auto;
+	box-shadow: 0 0 10px black;
+	background: url(background.jpg);
+}
+	#wrapper-text{
+		color: white;
+		font-size: 34px;
+		font-weight:bold;
+		padding: 40px 0 18px 15px;
+		text-shadow: blue 1px 1px 3px;
+	}
+	#wrapper > canvas{
+		margin: 0 15%;
+		border: 2px double black;
+	}
+	#wrapper .ship{
+		background-image: url(ship.png);
+		width: 63px;
+		height: 112px;
+	}
