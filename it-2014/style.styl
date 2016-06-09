@@ -1,0 +1,104 @@
+cell-size = 64px
+
+#map
+  width 16*15*3px
+  height 16*15*3px
+
+  div
+    text-align center
+    font-size 14px
+
+    border 1px solid red
+    float left
+    width 14px
+    height 14px
+    background-color green
+
+    &.d--2
+      background-color blue
+
+    &.d--1
+      background-color black
+
+    &.d-0
+      background-color white
+
+#board
+  width cell-size*9
+  height cell-size*9
+
+  div
+    float left
+    width cell-size - 2px
+    height cell-size - 2px
+    background-image url(images/style-network.png)
+
+  .fig-1
+    background-position-x -1*cell-size*2
+
+    &.deg-90
+      background-position-x -1*cell-size*3
+
+    &.deg-180
+      background-position-x -1*cell-size*4
+
+    &.deg-270
+      background-position-x -1*cell-size*5
+
+  .fig-2
+    background-position-x -1*cell-size*2
+    background-position-y -1*cell-size*1
+
+    &.on
+      background-position-x -1*cell-size*3
+
+    &.deg-90
+      background-position-y -1*cell-size*2
+
+  .fig-3
+    background-position-x -1*cell-size*4
+    background-position-y -1*cell-size*1
+
+    &.on
+      background-position-x -1*cell-size*5
+
+    &.deg-90
+      background-position-y -1*cell-size*2
+
+    &.deg-180
+      background-position-y -1*cell-size*3
+
+    &.deg-270
+      background-position-y -1*cell-size*4
+
+  .fig-4
+    background-position-x -1*cell-size*6
+    background-position-y -1*cell-size*1
+
+    &.on
+      background-position-x -1*cell-size*7
+
+    &.deg-90
+      background-position-y -1*cell-size*2
+
+    &.deg-180
+      background-position-y -1*cell-size*3
+
+    &.deg-270
+      background-position-y -1*cell-size*4
+
+  .fig-5
+    background-position-x -1*cell-size*0
+    background-position-y -1*cell-size*1
+
+    &.on
+      background-position-x -1*cell-size*1
+
+    &.deg-90
+      background-position-y -1*cell-size*2
+
+    &.deg-180
+      background-position-y -1*cell-size*3
+
+    &.deg-270
+      background-position-y -1*cell-size*4

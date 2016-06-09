@@ -1,0 +1,102 @@
+#map {
+  width: 720px;
+  height: 720px;
+}
+#map div {
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #f00;
+  float: left;
+  width: 14px;
+  height: 14px;
+  background-color: #008000;
+}
+#map div.d--2 {
+  background-color: #00f;
+}
+#map div.d--1 {
+  background-color: #000;
+}
+#map div.d-0 {
+  background-color: #fff;
+}
+#board {
+  width: 576px;
+  height: 576px;
+}
+#board div {
+  float: left;
+  width: 62px;
+  height: 62px;
+  background-image: url("images/style-network.png");
+}
+#board .fig-1 {
+  background-position-x: -128px;
+}
+#board .fig-1.deg-90 {
+  background-position-x: -192px;
+}
+#board .fig-1.deg-180 {
+  background-position-x: -256px;
+}
+#board .fig-1.deg-270 {
+  background-position-x: -320px;
+}
+#board .fig-2 {
+  background-position-x: -128px;
+  background-position-y: -64px;
+}
+#board .fig-2.on {
+  background-position-x: -192px;
+}
+#board .fig-2.deg-90 {
+  background-position-y: -128px;
+}
+#board .fig-3 {
+  background-position-x: -256px;
+  background-position-y: -64px;
+}
+#board .fig-3.on {
+  background-position-x: -320px;
+}
+#board .fig-3.deg-90 {
+  background-position-y: -128px;
+}
+#board .fig-3.deg-180 {
+  background-position-y: -192px;
+}
+#board .fig-3.deg-270 {
+  background-position-y: -256px;
+}
+#board .fig-4 {
+  background-position-x: -384px;
+  background-position-y: -64px;
+}
+#board .fig-4.on {
+  background-position-x: -448px;
+}
+#board .fig-4.deg-90 {
+  background-position-y: -128px;
+}
+#board .fig-4.deg-180 {
+  background-position-y: -192px;
+}
+#board .fig-4.deg-270 {
+  background-position-y: -256px;
+}
+#board .fig-5 {
+  background-position-x: 0px;
+  background-position-y: -64px;
+}
+#board .fig-5.on {
+  background-position-x: -64px;
+}
+#board .fig-5.deg-90 {
+  background-position-y: -128px;
+}
+#board .fig-5.deg-180 {
+  background-position-y: -192px;
+}
+#board .fig-5.deg-270 {
+  background-position-y: -256px;
+}
