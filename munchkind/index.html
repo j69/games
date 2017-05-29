@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>JS Games</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head><body>
+<div class="rollover">
+  <a id="door_bam" href="">
+      Bam door
+  </a>
+</div>
+<canvas id="canvas" width="1366" height="768"></canvas>
+<script>
+    var canvas         = document.getElementById('canvas'),
+    ctx                = canvas.getContext("2d"),
+    w                  = canvas.width,
+    h                  = canvas.height,
+
+    //paint background
+    fon                = new Image();
+    fon.src            = 'assets/fon.jpg';
+    fon.onload = function() {
+        ctx.drawImage(fon, 0, 0);
+    },
+
+    //deck
+    //@TODO add here cards
+    deck = [];
+
+    /**
+     * Enemy = [ name, level, classspecial, badstuff, bonuslevels, bonustreasure]
+     * Curse = [ name, ]
+     */
+    var CardType = {
+        Door : 'Door',
+        Treasure: 'Treasure'
+    };
+
+    /**
+     * @TODO
+     * maybe future turn statement
+     * some curse card will be check in future_statement
+     *
+     */
+
+    function Card( name, CardType, CardValue, picture, sound, goldValue, ){
+        this.Name = name;
+        this.CardType = CardType;
+        this.CardValue = CardValue;
+        this.picture = picture;
+        this.sound = sound;
+
+        this.goldValue = goldValue;
+    }
+
+
+    Card.prototype.toString = function(){
+        var value = '';
+        switch (this.CardType) {
+            case CardType.Door:
+                value = "Door";
+            break;
+
+            case CardType.Treasure:
+                value = "Treasure";
+            break;
+        }
+        //@TODO type here instead of name
+        return this.Name + '\ntype ' + value;
+    };
+
+    //new card
+    //@TODO var soundpath = 'sound'
+    deck.push( new Card('Ace', 'Door', '5', 'sounds/ace.mp3'));
+    deck.push( new Card('xcce', 'Door', '5', 'sounds/ace.mp3'));
+    deck.push( new Card('bce', 'Door', '5', 'sounds/ace.mp3'));
+
+    function drawRandomCard(){
+        return deck[Math.floor(Math.random() * deck.length)];
+    }
+
+    function playCardSound( SoundResource){
+        if (SoundResource) {
+            var currentAudio = new Audio();
+            currentAudio.src = SoundResource;
+            currentAudio.play();
+        }
+    }
+
+    function drawCard(){
+        var currentCard = drawRandomCard();
+        if (currentCard) {
+            console.log(currentCard.toString());
+
+            var currentImage = new Image();
+            currentImage.src = 'img/Cards/' + currentCard.picture + '.png';
+            currentImage.onload = function(){
+                ctx.drawImage(currentImage, 0, 0, 400, 400);
+            };
+
+            playCardSound(currentCard.soundpath);
+            drawText(currentCard, ctx);
+        }
+    }
+
+
+$(document).ready(function() {
+    $('#door_bam').click(function(e) {
+        e.preventDefault();
+        drawCard();
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body></html>

@@ -1,0 +1,8 @@
+.rollover{
+    width: 150px;
+    height: 70px;
+    background: url(assets/productAnimate2.jpg);
+}
+.rollover:hover {
+    background-position: 0 -75px;
+}
